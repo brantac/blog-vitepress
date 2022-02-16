@@ -1,0 +1,30 @@
+{
+  "name": "blog-vitepress",
+  "version": "1.0.0",
+  "description": "My personal blog",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:buid": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brantac/blog-vitepress.git"
+  },
+  "keywords": [
+    "blog",
+    "vitepress",
+    "vue"
+  ],
+  "author": "Arthur Brant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brantac/blog-vitepress/issues"
+  },
+  "homepage": "https://github.com/brantac/blog-vitepress#readme",
+  "devDependencies": {
+    "vitepress": "^0.22.2"
+  }
+}
