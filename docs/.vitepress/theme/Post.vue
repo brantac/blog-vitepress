@@ -1,7 +1,5 @@
 <template>
     <div>
-        <!-- <h1>{{ data.title }}</h1> -->
-
         <Content />
     </div>
 </template>
