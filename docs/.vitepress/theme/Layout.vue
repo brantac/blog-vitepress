@@ -1,4 +1,5 @@
 <template>
+    <Navbar />
     <main>
         <h1>Blog</h1>
         
@@ -11,6 +12,7 @@
 import { useRoute } from 'vitepress'
 import { computed, ref } from 'vue'
 
+import Navbar from './components/Navbar.vue'
 import Home from './Home.vue'
 import Post from './Post.vue'
 

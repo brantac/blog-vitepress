@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #fff;
+}
+* {
+    box-sizing: border-box;
+}
 body {
-    background-color: #fff;
+    margin: 0;
+    background-color: var(--primary-color);
+}
+/* Generic CSS Rules */
+.flex {
+    display: flex;
 }
