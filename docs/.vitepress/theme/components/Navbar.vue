@@ -1,0 +1,69 @@
+<template>
+    <nav id="navbar" class="flex">
+        <div class="logo">
+            <a href="/">
+                <svg id="Logo_SVG_Optimized" data-name="Logo SVG Optimized" xmlns="http://www.w3.org/2000/svg" width="17" height="24" viewBox="0 0 26.721 35">
+                <g id="Grupo_35" data-name="Grupo 35">
+                    <text id="_" data-name="/" transform="translate(0 28)" font-size="30" font-family="Work Sans" font-weight="700"><tspan x="0" y="0">/</tspan></text>
+                    <path id="Caminho_3" data-name="Caminho 3" d="M49.467,83.753l4.211,11.758h4.735L54.2,83.753Z" transform="translate(-31.691 -65.916)" fill="#f0c808"/>
+                </g>
+                </svg>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <Socials />
+            <span class="share-blog-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20.315" height="24" viewBox="0 0 20.315 26">
+                    <g id="Sharing_Button" data-name="Sharing Button" transform="translate(1 1)">
+                        <path id="Sharing_Button-2" data-name="Sharing Button" d="M10.5,20.09a3.9,3.9,0,0,1,.795-2.365L6.986,14.4a3.91,3.91,0,1,1,.127-4.635l4.32-3.327A3.9,3.9,0,1,1,14.41,7.82a3.9,3.9,0,0,1-2.977-1.379L7.113,9.768A3.915,3.915,0,0,1,6.986,14.4L11.3,17.725A3.911,3.911,0,1,1,10.5,20.09Z" fill="none" stroke="#313628" stroke-width="2"/>
+                    </g>
+                </svg>
+            </span>
+            <span class="menu-toggler">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                    <g id="Hamburger_Menu_Open" data-name="Hamburger Menu Open" transform="translate(1 1)">
+                        <line id="Linha_15" data-name="Linha 15" x2="32" transform="translate(0 32)" fill="none" stroke="#353531" stroke-linecap="round" stroke-width="2"/>
+                        <line id="Linha_15-2" data-name="Linha 15" x2="32" transform="translate(0 16)" fill="none" stroke="#353531" stroke-linecap="round" stroke-width="2"/>
+                        <line id="Linha_15-3" data-name="Linha 15" x2="32" fill="none" stroke="#353531" stroke-linecap="round" stroke-width="2"/>
+                    </g>
+                </svg>
+            </span>
+        </div>
+    </nav>
+</template>
+
+<script setup lang="ts">
+import Socials from './Socials.vue'
+</script>
+
+<style>
+#navbar {
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+#navbar.flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+.logo a {
+    text-decoration: none;
+}
+.navbar-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar-menu > * {
+    margin-left: 1rem;
+}
+.menu-toggler,
+.share-blog-btn {
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .menu-toggler {
+        display: none;
+    }
+}
+</style>
