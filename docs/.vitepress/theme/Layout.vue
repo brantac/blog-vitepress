@@ -1,8 +1,6 @@
 <template>
     <Navbar />
-    <main>
-        <h1>Blog</h1>
-        
+    <main class="main flex">
         <Home v-if="isHome" />
         <Post v-else />
     </main>
@@ -21,5 +19,8 @@ const isHome = computed(() => route.path.replace(/index.html$/, '') === '/')
 </script>
 
 <style scoped>
-
+.main {
+    padding: 1rem;
+    flex-direction: column
+}
 </style>
