@@ -3,10 +3,18 @@
         <div class="logo">
             <a href="/">
                 <svg id="Logo_SVG_Optimized" data-name="Logo SVG Optimized" xmlns="http://www.w3.org/2000/svg" width="17" height="24" viewBox="0 0 26.721 35">
-                <g id="Grupo_35" data-name="Grupo 35">
-                    <text id="_" data-name="/" transform="translate(0 28)" font-size="30" font-family="Work Sans" font-weight="700"><tspan x="0" y="0">/</tspan></text>
-                    <path id="Caminho_3" data-name="Caminho 3" d="M49.467,83.753l4.211,11.758h4.735L54.2,83.753Z" transform="translate(-31.691 -65.916)" fill="#f0c808"/>
-                </g>
+                    <g id="Grupo_35" data-name="Grupo 35">
+                        <text id="_" data-name="/" transform="translate(0 28)" font-size="30" font-family="Work Sans" font-weight="700"><tspan x="0" y="0">/</tspan></text>
+                        <path id="Caminho_3" data-name="Caminho 3" d="M49.467,83.753l4.211,11.758h4.735L54.2,83.753Z" transform="translate(-31.691 -65.916)" fill="#f0c808"/>
+                    </g>
+                </svg>
+                <svg id="Brand_SVG_Optimized" data-name="Brand SVG Optimized" xmlns="http://www.w3.org/2000/svg" width="60.538" height="34.703" viewBox="0 0 60.538 34.703">
+                    <g id="Grupo_34" data-name="Grupo 34">
+                        <text id="_" data-name="/" transform="translate(0 16)" font-size="17" font-family="Work Sans" font-weight="700"><tspan x="0" y="0">/</tspan></text>
+                        <path id="Caminho_2" data-name="Caminho 2" d="M12.126,20.53l2.514,7.02h2.827l-2.514-7.02Z" transform="translate(-1.513 -10.062)" fill="#f0c808"/>
+                    </g>
+                    <text id="rthur" transform="translate(16.538 17.253)" font-size="17" font-family="Work Sans" font-weight="700"><tspan x="0" y="0">rthur</tspan></text>
+                    <text id="Brant" transform="translate(13.105 30.703)" font-size="17" font-family="Work Sans" font-weight="700"><tspan x="0" y="0">Brant</tspan></text>
                 </svg>
             </a>
         </div>
@@ -61,9 +69,18 @@ import Socials from './Socials.vue'
 .share-blog-btn {
     cursor: pointer;
 }
+#Brand_SVG_Optimized {
+    display: none;
+}
 @media (min-width: 768px) {
     .menu-toggler {
         display: none;
+    }
+    #Logo_SVG_Optimized {
+        display: none;
+    }
+    #Brand_SVG_Optimized {
+        display: inline;
     }
 }
 </style>
