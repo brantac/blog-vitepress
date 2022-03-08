@@ -8,10 +8,19 @@
         </div>
     </div>
     
-    <a href="../posts/2022/02/16/data-structures-in-javascript/">Data Structures In Javascript</a>
+    <div class="posts">
+        <div class="post-item" v-for="{ title, href, date, excerpt } of posts">
+            <div>{{ date.string }}</div>
+            <h2>
+                <a :href="href">{{ title }}</a>
+            </h2>
+            <div>{{ excerpt }}</div>
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
+import { data as posts } from '../posts.data'
 
 </script>
 
