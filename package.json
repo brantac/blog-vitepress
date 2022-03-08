@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/brantac/blog-vitepress#readme",
   "devDependencies": {
+    "gray-matter": "^4.0.3",
     "vitepress": "^0.22.2"
   }
 }
