@@ -18,6 +18,9 @@
 * {
     box-sizing: border-box;
 }
+html {
+    font-size: var(--base-font-size);
+}
 h1, .h1 {
     font-size: var(--h1-size);
 }
@@ -37,18 +40,18 @@ body {
     margin: 0;
     background-color: var(--primary-color);
     font-size: var(--base-font-size);
-
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
 }
 /* Generic CSS Rules */
 .flex {
     display: flex;
 }
 .tags {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 .tag-item {
     padding: 0.5rem;
@@ -58,8 +61,4 @@ body {
     color: #353531;
     font-size: 0.8rem;
     font-weight: bold;
-}
-.title {
-    /* font-family:'Courier New', Courier, monospace; */
-    font-family: 'Work Sans';
 }
