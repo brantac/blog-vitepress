@@ -20,7 +20,10 @@ const isHome = computed(() => route.path.replace(/index.html$/, '') === '/')
 
 <style scoped>
 .main {
-    padding: 1rem;
-    flex-direction: column
+    padding: 3rem 1rem 0 1rem;
+    flex-direction: column;
+    max-width: 44rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
