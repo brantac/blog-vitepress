@@ -26,11 +26,10 @@
         </div>
     </div>
 
-    <LoadPostsButton />
+    <button class="load-posts-button" @click="loadPosts">Load more posts</button>
 </template>
 
 <script setup lang="ts">
-import LoadPostsButton from './components/LoadPostsButton.vue'
 import { data as posts } from '../posts.data'
 
 </script>
@@ -80,5 +79,21 @@ import { data as posts } from '../posts.data'
 }
 .excerpt {
     margin-bottom: 1rem;
+}
+/**
+    Loading Post Button
+*/
+.load-posts-button {
+    width: 100%;
+    height: 50px;
+    background-color: #645dd7;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 6rem;
+    border-radius: 0.5rem;
 }
 </style>
