@@ -85,6 +85,9 @@ import { data as posts } from '../posts.data'
 */
 .load-posts-button {
     width: 100%;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
     height: 50px;
     background-color: #645dd7;
     color: #fff;
