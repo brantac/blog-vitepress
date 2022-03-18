@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <button class="load-posts-button" @click="loadPosts">Load more posts</button>
+    <button class="load-posts-button" @click="">Load more posts</button>
 </template>
 
 <script setup lang="ts">
@@ -93,7 +93,6 @@ import { data as posts } from '../posts.data'
     border: none;
     outline: none;
     cursor: pointer;
-    margin-bottom: 6rem;
     border-radius: 0.5rem;
 }
 </style>
