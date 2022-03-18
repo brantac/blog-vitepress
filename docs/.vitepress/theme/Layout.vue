@@ -64,6 +64,7 @@ const isHome = computed(() => route.path.replace(/index.html$/, '') === '/')
     max-width: 44rem;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 6rem;
 }
 /**
     Navbar
