@@ -1,6 +1,6 @@
 <template>
     <nav id="navbar" class="flex flex-row justify-between align-center
-        p-cs-1 md:px-cs-5 md:pt-cs-2 w-full">
+        p-cs-4 md:px-cs-7 lg:px-cs-8 xl:px-cs-9 w-full">
         <div class="logo">
             <a href="/">
                 <svg id="Logo_SVG_Optimized" data-name="Logo SVG Optimized" xmlns="http://www.w3.org/2000/svg" width="17" height="24" viewBox="0 0 26.721 35">
