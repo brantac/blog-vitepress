@@ -1,5 +1,6 @@
 <template>
-    <nav id="navbar" class="flex">
+    <nav id="navbar" class="flex flex-row justify-between align-center
+        p-cs-1 md:px-cs-5 md:pt-cs-2 w-full">
         <div class="logo">
             <a href="/">
                 <svg id="Logo_SVG_Optimized" data-name="Logo SVG Optimized" xmlns="http://www.w3.org/2000/svg" width="17" height="24" viewBox="0 0 26.721 35">
@@ -18,7 +19,7 @@
                 </svg>
             </a>
         </div>
-        <div class="navbar-menu">
+        <div id="navbar-menu" class="flex flex-row align-center gap-cs-4">
             <Socials />
             <span class="share-blog-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20.315" height="24" viewBox="0 0 20.315 26">
@@ -38,10 +39,10 @@
             </span>
         </div>
     </nav>
-    <main class="main flex">
-        <Home v-if="isHome" />
-        <Post v-else />
-    </main>
+    <Home v-if="isHome" />
+    <Post v-else />
+    <!-- <main class="main flex">
+    </main> -->
 </template>
 
 <script setup lang="ts">
@@ -58,36 +59,11 @@ const isHome = computed(() => route.path.replace(/index.html$/, '') === '/')
 </script>
 
 <style scoped>
-.main {
-    padding: 3rem 1rem 0 1rem;
-    flex-direction: column;
-    max-width: 44rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 6rem;
-}
 /**
     Navbar
 */
-#navbar {
-    width: 100%;
-    padding: 0.5rem 1rem;
-}
-#navbar.flex {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;    
-}
 .logo a {
     text-decoration: none;
-}
-.navbar-menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.navbar-menu > * {
-    margin-left: 1rem;
 }
 .menu-toggler,
 .share-blog-btn {
