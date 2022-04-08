@@ -12,8 +12,18 @@ module.exports = {
     }
 }
 
+type Post = {
+    title: String,
+    href: String,
+    date: {
+        time: number,
+        string: String
+    },
+    excerpt: String
+}
+
 function getFiles (dir = '') {
-    let posts = []
+    let posts: Array<Post> = []
     let files = readdirSync(dir)
     files.forEach(file => {
         let filePath = join(dir, file)
@@ -57,7 +67,7 @@ function getPost (file = '') {
     return post;
 }
 
-function formatDate (date) {
+function formatDate (date: Date | string) {
     if (!(date instanceof Date)) {
         date = new Date(date)
     }
