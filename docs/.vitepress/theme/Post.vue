@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { computed } from "vue";
 import { useData, useRoute } from "vitepress";
 import { data as posts } from "../posts.data";
+import { computed } from "vue";
 
-// const { frontmatter: data } = useData();
-const { frontmatter } = useData();
+import  Date from "./components/Date.vue";
 
+const { frontmatter: data } = useData();
 const route = useRoute();
 
 type Post = {
@@ -31,7 +31,8 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
 <template>
     <article class="px-cs-4 md:px-cs-8 lg:px-cs-9 xl:px-cs-10 pb-16">
         <header>
-            <h1>{{ frontmatter.title }}</h1>
+            <Date :date="date" />
+            <h1>{{ data.title }}</h1>
         </header>
 
         <Content />
