@@ -40,6 +40,9 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
                     #{{ tag }}
                 </span>
             </div>
+            <div class="author">
+                <p class="name">{{ data.author }}</p>
+            </div>
         </header>
 
         <Content />
