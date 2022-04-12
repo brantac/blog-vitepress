@@ -14,14 +14,12 @@
     <!-- <main class="mx-auto px-cs-4 lg:px-0 py-16 max-w-3xl"> -->
     <main class="px-cs-4 md:px-cs-8 lg:px-cs-9 xl:px-cs-10 pb-16">
         <div class="posts">
-            <div class="post-item" v-for="{ title, href, date, excerpt } of posts">
+            <div class="post-item" v-for="{ title, href, date, topics, excerpt } of posts">
                 <div class="post-date">{{ date.string }}</div>
                 <h3 class="title font-bold">
                     <a :href="href">{{ title }}</a>
                 </h3>
-                <div class="tag-container">
-                    <span class="tag-item">#softwareengineer</span>
-                </div>
+                <Tags :topics="topics.length > 0 ? [topics[0]] : topics" />
                 <div class="excerpt">{{ excerpt }}</div>
                 <div class="read-the-article">
                     <a :href="href">Read the article →</a>
@@ -39,6 +37,7 @@
 
 <script setup lang="ts">
 import { data as posts } from '../posts.data'
+import Tags from './Tags.vue'
 
 </script>
 
