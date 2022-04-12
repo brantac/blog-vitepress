@@ -37,7 +37,7 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
             <h1>{{ data.title }}</h1>
             <div class="tag-container">
                 <span v-for="tag in topics" class="tag-item">
-                    {{ tag }}
+                    #{{ tag }}
                 </span>
             </div>
         </header>
