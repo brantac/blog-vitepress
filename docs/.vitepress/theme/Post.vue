@@ -4,7 +4,7 @@ import { data as posts } from "../posts.data";
 import { computed } from "vue";
 
 import  Date from "./components/Date.vue";
-import Tags from "./Tags.vue";
+import Tags from "./components/Tags.vue";
 
 const { frontmatter: data } = useData();
 const route = useRoute();

@@ -35,7 +35,7 @@
 import { ref } from 'vue';
 import { data as posts } from '../posts.data'
 
-import Tags from './Tags.vue'
+import Tags from './components/Tags.vue'
 
 const introductionTopics = ref([
     "softwareengineer", "tutorials", "tips"
