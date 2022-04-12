@@ -5,11 +5,7 @@
     pb-cs-6 md:pb-cs-7 lg:pb-cs-8">
         <h1 class="font-black">Blog</h1>
         <h2 class="introduction-title">Read Topics About</h2>
-        <div class="tag-container">
-            <span class="tag-item">#softwareengineer</span>
-            <span class="tag-item">#tutorials</span>
-            <span class="tag-item">#tips</span>
-        </div>
+        <Tags :topics="introductionTopics" />
     </div>
     <!-- <main class="mx-auto px-cs-4 lg:px-0 py-16 max-w-3xl"> -->
     <main class="px-cs-4 md:px-cs-8 lg:px-cs-9 xl:px-cs-10 pb-16">
@@ -36,9 +32,14 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { data as posts } from '../posts.data'
+
 import Tags from './Tags.vue'
 
+const introductionTopics = ref([
+    "softwareengineer", "tutorials", "tips"
+]);
 </script>
 
 <style scoped>
