@@ -15,6 +15,7 @@ type Post = {
         time: number,
         string: String
     },
+    topics: string[],
     excerpt: String
 }
 
@@ -23,6 +24,7 @@ function findCurrentPostIndex(): number {
     return posts.findIndex(pathIsEqual);
 }
 
+const topics: string[] = data.value.topics?.split(",");
 const date = computed(() => posts[findCurrentPostIndex()].date);
 const nextPost = computed(() => posts[findCurrentPostIndex() - 1]);
 const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
@@ -30,9 +32,14 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
 
 <template>
     <article class="px-cs-4 md:px-cs-8 lg:px-cs-9 xl:px-cs-10 pb-16">
-        <header>
+        <header class="text-center">
             <Date :date="date" />
             <h1>{{ data.title }}</h1>
+            <div class="tag-container">
+                <span v-for="tag in topics" class="tag-item">
+                    {{ tag }}
+                </span>
+            </div>
         </header>
 
         <Content />
