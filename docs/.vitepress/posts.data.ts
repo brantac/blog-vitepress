@@ -61,7 +61,7 @@ function getPost (file = '') {
         href: `${file.replace(/\.md$/, '.html')
                 .replace(/[/\w-]*(?=\/posts[/\w-]+.html$)/,'')}`,
         date: formatDate(data.date),
-        topics: data.topics?.split(","),
+        topics: data.topics ? data.topics.split(",") : [], // send a default value
         excerpt
     }
     cache.set(file, {timestamp, post})
