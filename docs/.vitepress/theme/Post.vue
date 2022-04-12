@@ -4,6 +4,7 @@ import { data as posts } from "../posts.data";
 import { computed } from "vue";
 
 import  Date from "./components/Date.vue";
+import Tags from "./Tags.vue";
 
 const { frontmatter: data } = useData();
 const route = useRoute();
@@ -35,11 +36,7 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
         <header class="text-center">
             <Date :date="date" />
             <h1>{{ data.title }}</h1>
-            <div class="tag-container">
-                <span v-for="tag in topics" class="tag-item">
-                    #{{ tag }}
-                </span>
-            </div>
+            <Tags :topics="topics" />
             <div class="author">
                 <p class="name">{{ data.author }}</p>
             </div>
