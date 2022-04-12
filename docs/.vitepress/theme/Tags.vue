@@ -1,7 +1,8 @@
 <script setup lang="ts">
-const props = defineProps<{
+interface Props {
     topics: string[]
-}>()
+}
+const props = defineProps<Props>();
 </script>
 
 <template>
