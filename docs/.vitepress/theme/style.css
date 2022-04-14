@@ -7,6 +7,7 @@
     src: url('../../../Work_Sans/WorkSans-VariableFont_wght.ttf');
 }
 :root {
+    --max-char: 60ch;
     /* Color */
     --color-black: #000;
     --color-lighter-black: #1F1F1F;
@@ -65,6 +66,17 @@ body {
     font-size: var(--base-font-size);
     font-family: var(--main-font-family);
     color: var(--text-color);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+figcaption {
+  max-inline-size: 60ch;
 }
 input,
 button {
