@@ -29,6 +29,7 @@
 
     /* Font */
     --base-font-size: 18px;
+    --base-font-size: 112.5%; /* 16px * 112.5% = 18px */
     --ratio: 1.618;
     --h5-size: var(--base-font-size);
     --h4-size: var(--base-font-size);
@@ -38,6 +39,12 @@
     --h1-size: calc(var(--h2-size) * var(--ratio));
     --p-size: var(--base-font-size);
     --small-text: calc(var(--base-font-size) / var(--ratio));
+    /* Approach 2 to responsive Typography */
+    --h5-golden: 1rem;
+    --h4-golden: 1rem;
+    --h3-golden: 1.618rem;
+    --h2-golden: 2.617924rem;
+    --h1-golden: 4.235801032rem;
     
     /* --navbar-height: calc(var(--base-font-size) * var(--ratio)); */
     --main-font-family: 'Work Sans', Arial, Helvetica, sans-serif;
@@ -45,25 +52,17 @@
 html {
     font-size: var(--base-font-size);
 }
-h1, .h1 {
-    font-size: var(--h1-size);
+$headers: 1, 2, 3, 4, 5;
+@each $num in $headers {
+    h#{$num}, .h#{$num} {
+        font-size: var(--h#{$num}-size);
+    }
 }
-h2, .h2 {
-    font-size: var(--h2-size);
-}
-h3, .h3 {
-    font-size: var(--h3-size);
-}
-h4, .h4 {
-    font-size: var(--h4-size);
-}
-h5, .h5 {
-    font-size: var(--h5-size);
-}
+/* Approach 2 to responsive Typography */
+/* End of Approach 2 to responsive Typography */
 body {
     margin: 0;
     background-color: var(--bg-color);
-    font-size: var(--base-font-size);
     font-family: var(--main-font-family);
     color: var(--text-color);
 }
