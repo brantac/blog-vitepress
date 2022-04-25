@@ -36,9 +36,9 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
         <header class="text-center">
             <Date :date="date" />
             <h1>{{ data.title }}</h1>
-            <Tags :topics="topics" />
+            <Tags class="justify-center" :topics="topics" />
             <div class="author">
-                <p class="name">{{ data.author }}</p>
+                <p class="name">Arthur Brant</p>
             </div>
         </header>
 

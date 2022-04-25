@@ -5,7 +5,7 @@
     pb-cs-6 md:pb-cs-7 lg:pb-cs-8">
         <h1 class="font-black">Blog</h1>
         <h2 class="introduction-title">Read Topics About</h2>
-        <Tags :topics="introductionTopics" />
+        <Tags class="justify-start" :topics="introductionTopics" />
     </div>
     <!-- <main class="mx-auto px-cs-4 lg:px-0 py-16 max-w-3xl"> -->
     <main class="px-cs-4 md:px-cs-8 lg:px-cs-9 xl:px-cs-10 pb-16">
@@ -15,7 +15,7 @@
                 <h3 class="title font-bold">
                     <a :href="href">{{ title }}</a>
                 </h3>
-                <Tags :topics="topics.length > 0 ? [topics[0]] : topics" />
+                <Tags class="justify-start" :topics="topics.length > 0 ? [topics[0]] : topics" />
                 <div class="excerpt">{{ excerpt }}</div>
                 <div class="read-the-article">
                     <a :href="href">Read the article →</a>

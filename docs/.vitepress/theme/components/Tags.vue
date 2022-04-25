@@ -13,12 +13,11 @@ const props = defineProps<Props>();
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .tag-container {
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: flex-start;
     flex-wrap: wrap;
 }
 .tag-item {
