@@ -7,7 +7,15 @@
     src: url('../../../Work_Sans/WorkSans-VariableFont_wght.ttf');
 }
 :root {
+    // Breakpoints
+    --sm: 640px;
+    --md: 768px;
+    --lg: 1024px;
+    --xl: 1280px;
+    --2xl: 1536px;
+
     --max-char: 60ch;
+
     /* Color */
     --color-black: #000;
     --color-lighter-black: #1F1F1F;
@@ -27,39 +35,44 @@
     --icon-color: var(--color-dark-gray);
     accent-color: var(--color-primary);
 
-    /* Font */
-    --base-font-size: 18px;
-    --base-font-size: 112.5%; /* 16px * 112.5% = 18px */
-    --ratio: 1.618;
+    /* Typography */
+    --base-font-size: 1rem; 
+    --golden-ratio: 1.618;
+    --augmented-fourth-ratio: 1.414;
+    --h-ratio: var(--augmented-fourth-ratio);
     --h5-size: var(--base-font-size);
     --h4-size: var(--base-font-size);
-    /* --h4-size: calc(var(--h5-size) * var(--ratio)); */
-    --h3-size: calc(var(--h4-size) * var(--ratio));
-    --h2-size: calc(var(--h3-size) * var(--ratio));
-    --h1-size: calc(var(--h2-size) * var(--ratio));
+    /* --h4-size: calc(var(--h5-size) * var(--golden-ratio)); */
+    --h3-size: calc(var(--h4-size) * var(--h-ratio));
+    --h2-size: calc(var(--h3-size) * var(--h-ratio));
+    --h1-size: calc(var(--h2-size) * var(--h-ratio));
     --p-size: var(--base-font-size);
-    --small-text: calc(var(--base-font-size) / var(--ratio));
-    /* Approach 2 to responsive Typography */
-    --h5-golden: 1rem;
-    --h4-golden: 1rem;
-    --h3-golden: 1.618rem;
-    --h2-golden: 2.617924rem;
-    --h1-golden: 4.235801032rem;
+    --small-text: calc(var(--base-font-size) / var(--golden-ratio));
     
-    /* --navbar-height: calc(var(--base-font-size) * var(--ratio)); */
+    /* --navbar-height: calc(var(--base-font-size) * var(--golden-ratio)); */
     --main-font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+
+    @media (min-width: 640px) {
+        --h-ratio: var(--golden-ratio);
+    }
 }
 html {
-    font-size: var(--base-font-size);
+    --min-vw: 0px;
+    --max-vw: 978px;
+    font-size: 112.5%;  // 16px * 112.5% = 18px
+    @media (min-width: 640px) {
+        font-size: calc(112.5% + (24 - 18) * ((100vw - 640px) / (978 - 640)));
+    }
+    @media (min-width: 1024px) {
+        font-size: 150%;
+    }
 }
 $headers: 1, 2, 3, 4, 5;
 @each $num in $headers {
-    h#{$num}, .h#{$num} {
+    h#{$num}, .h#{$num} {  // example: h1, .h1 selector
         font-size: var(--h#{$num}-size);
     }
 }
-/* Approach 2 to responsive Typography */
-/* End of Approach 2 to responsive Typography */
 body {
     margin: 0;
     background-color: var(--bg-color);
