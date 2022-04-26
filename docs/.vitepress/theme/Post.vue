@@ -36,19 +36,22 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
     class="px-cs-4 md:px-cs-8 lg:px-cs-9 xl:px-cs-10 pb-16">
         <header class="text-center">
             <Date :date="date" />
-            <h1>{{ data.title }}</h1>
+            <h1 class="font-black">{{ data.title }}</h1>
             <Tags class="justify-center" :topics="topics" />
             <div class="author">
-                <p class="name">Arthur Brant</p>
+                <div class="name ">Arthur Brant</div>
             </div>
+            <div class="previous_next_article"></div>
         </header>
 
-        <Content />
+        <div class="content">
+            <Content />
+        </div>
     </article>
 </template>
 
 <style scoped lang="scss">
-article {
+.content {
     @media (min-width: 640px) {
         font-size: calc(112.5% + (24 - 18) * ((100vw - 640px) / (1024 - 640)));
     }
