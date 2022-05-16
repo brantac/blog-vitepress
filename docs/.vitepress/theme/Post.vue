@@ -46,7 +46,7 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
         <div class="content">
             <Content />
         </div>
-        <div class="previous_next_article
+        <div class="navigation_section
             flex flex-col sm:flex-row justify-between gap-y-4"
         >
             <div class="previous_article flex flex-col items-start" v-if="previousPost">
@@ -63,7 +63,7 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
 </template>
 
 <style scoped lang="scss">
-.previous_next_article a {
+.navigation_section a {
     color: var(--link-color);
 }
 .content {
