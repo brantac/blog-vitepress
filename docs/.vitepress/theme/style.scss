@@ -50,7 +50,6 @@
     --small-text: calc(var(--base-font-size) / var(--golden-ratio));
     
     /* --navbar-height: calc(var(--base-font-size) * var(--golden-ratio)); */
-    --main-font-family: 'Work Sans', Arial, Helvetica, sans-serif;
 
     @media (min-width: 640px) {
         --h-ratio: var(--golden-ratio);
@@ -70,8 +69,9 @@ $headers: 1, 2, 3, 4, 5;
 body {
     margin: 0;
     background-color: var(--bg-color);
-    font-family: var(--main-font-family);
+    font-family: Helvetica, Arial, sans-serif;
     color: var(--text-color);
+    font-weight: 500;
 }
 p,
 h1,
