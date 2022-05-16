@@ -25,7 +25,7 @@ function findCurrentPostIndex(): number {
     return posts.findIndex(pathIsEqual);
 }
 
-const topics: string[] = data.value.topics?.split(",");
+const topics: string[] | undefined = data.value.topics?.split(",");
 const date = computed(() => posts[findCurrentPostIndex()].date);
 const nextPost = computed(() => posts[findCurrentPostIndex() - 1]);
 const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
@@ -37,20 +37,35 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
         <header class="text-center">
             <Date :date="date" />
             <h1 class="font-black">{{ data.title }}</h1>
-            <Tags class="justify-center" :topics="topics" />
+            <Tags class="justify-center" :topics="topics ?? []" />
             <div class="author">
                 <div class="name ">Arthur Brant</div>
             </div>
-            <div class="previous_next_article"></div>
         </header>
 
         <div class="content">
             <Content />
         </div>
+        <div class="previous_next_article
+            flex flex-col sm:flex-row justify-between gap-y-4"
+        >
+            <div class="previous_article flex flex-col items-start" v-if="previousPost">
+                <span>← Previous Article</span>
+                <a :href="previousPost.href">{{ previousPost.title }}</a>
+            </div>
+            <div class="next_article flex flex-col items-start" v-if="nextPost">
+                <span>Next Article →</span>
+                <a :href="nextPost.href">{{ nextPost.title }}</a>
+            </div>
+        </div>
+
     </article>
 </template>
 
 <style scoped lang="scss">
+.previous_next_article a {
+    color: var(--link-color);
+}
 .content {
     @media (min-width: 640px) {
         font-size: calc(112.5% + (24 - 18) * ((100vw - 640px) / (1024 - 640)));
