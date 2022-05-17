@@ -53,16 +53,16 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
         flex flex-col items-center gap-y-4
         pb-cs-5"
     >
-        <div class="previous_article flex flex-col items-center" v-if="previousPost">
-            <span>← Previous Article</span>
-            <a class="text-center" :href="previousPost.href">
-                {{ previousPost.title }}
-            </a>
-        </div>
         <div class="next_article flex flex-col items-center" v-if="nextPost">
             <span>Next Article →</span>
             <a class="text-center" :href="nextPost.href">
                 {{ nextPost.title }}
+            </a>
+        </div>
+        <div class="previous_article flex flex-col items-center" v-if="previousPost">
+            <span>← Previous Article</span>
+            <a class="text-center" :href="previousPost.href">
+                {{ previousPost.title }}
             </a>
         </div>
     </div>
