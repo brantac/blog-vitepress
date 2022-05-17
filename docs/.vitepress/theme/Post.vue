@@ -35,7 +35,7 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
     <article id="article"
     class="px-cs-4 md:px-cs-8 lg:px-cs-9 xl:px-cs-10
         pt-cs-6 md:pt-cs-7 lg:pt-cs-8
-        pb-cs-6 md:pb-cs-7 lg:pb-cs-8"
+        pb-cs-5"
     >
         <header class="text-center pb-cs-5">
             <Date :date="date" />
@@ -45,28 +45,27 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
                 <div class="name ">Arthur Brant</div>
             </div>
         </header>
-        <!-- Markdown content -->
+        <!-- Content -->
         <Content class="content flex flex-col items-center" />
-        <!-- /Markdown content -->
-        
-        <div class="navigation_section
-            flex flex-col items-center gap-y-4"
-        >
-            <div class="previous_article flex flex-col items-center" v-if="previousPost">
-                <span>← Previous Article</span>
-                <a class="text-center" :href="previousPost.href">
-                    {{ previousPost.title }}
-                </a>
-            </div>
-            <div class="next_article flex flex-col items-center" v-if="nextPost">
-                <span>Next Article →</span>
-                <a class="text-center" :href="nextPost.href">
-                    {{ nextPost.title }}
-                </a>
-            </div>
-        </div>
-
+        <!-- /Content -->
     </article>
+    <div class="navigation_section
+        flex flex-col items-center gap-y-4
+        pb-cs-5"
+    >
+        <div class="previous_article flex flex-col items-center" v-if="previousPost">
+            <span>← Previous Article</span>
+            <a class="text-center" :href="previousPost.href">
+                {{ previousPost.title }}
+            </a>
+        </div>
+        <div class="next_article flex flex-col items-center" v-if="nextPost">
+            <span>Next Article →</span>
+            <a class="text-center" :href="nextPost.href">
+                {{ nextPost.title }}
+            </a>
+        </div>
+    </div>
 </template>
 
 <style scoped lang="scss">
