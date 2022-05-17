@@ -46,7 +46,7 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
             </div>
         </header>
         <!-- Markdown content -->
-        <Content class="content" />
+        <Content class="content flex flex-col items-center" />
         <!-- /Markdown content -->
         
         <div class="navigation_section
