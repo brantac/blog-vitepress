@@ -45,10 +45,10 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
                 <div class="name ">Arthur Brant</div>
             </div>
         </header>
-
-        <div class="content">
-            <Content />
-        </div>
+        <!-- Markdown content -->
+        <Content class="content" />
+        <!-- /Markdown content -->
+        
         <div class="navigation_section
             flex flex-col items-center gap-y-4"
         >
