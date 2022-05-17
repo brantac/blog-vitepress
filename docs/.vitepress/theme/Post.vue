@@ -33,8 +33,11 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
 
 <template>
     <article id="article"
-    class="px-cs-4 md:px-cs-8 lg:px-cs-9 xl:px-cs-10 pb-16">
-        <header class="text-center">
+    class="px-cs-4 md:px-cs-8 lg:px-cs-9 xl:px-cs-10
+        pt-cs-6 md:pt-cs-7 lg:pt-cs-8
+        pb-cs-6 md:pb-cs-7 lg:pb-cs-8"
+    >
+        <header class="text-center pb-cs-5">
             <Date :date="date" />
             <h1 class="font-black">{{ data.title }}</h1>
             <Tags class="justify-center" :topics="topics ?? []" />
