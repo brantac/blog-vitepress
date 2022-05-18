@@ -20,12 +20,12 @@
 .social-icon path {
     fill: var(--icon-color);
 }
-.social-icon {
+/* .social-icon {
     display: none;
 }
 @media (min-width: 768px) {
     .social-icon {
         display: unset;
     }
-}
+} */
 </style>
