@@ -5,6 +5,7 @@ import { computed } from "vue";
 
 import  Date from "./components/Date.vue";
 import Tags from "./components/Tags.vue";
+import Author from "./components/Author.vue";
 
 const { frontmatter: data } = useData();
 const route = useRoute();
@@ -41,9 +42,7 @@ const previousPost = computed(() => posts[findCurrentPostIndex() + 1]);
             <Date :date="date" />
             <h1 class="font-black">{{ data.title }}</h1>
             <Tags class="justify-center" :topics="topics ?? []" />
-            <div class="author">
-                <div class="name ">Arthur Brant</div>
-            </div>
+            <Author />
         </header>
         <!-- Content -->
         <Content class="content flex flex-col items-center" />
