@@ -5,7 +5,7 @@ import Socials from "./Socials.vue";
 <template>
     <div class="author flex flex-row gap-x-4">
         <div class="name ">Arthur Brant</div>
-        <Socials />
+        <Socials class="flex flex-row gap-x-4" />
     </div>
 </template>
 
