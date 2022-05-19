@@ -20,7 +20,6 @@
             </a>
         </div>
         <div id="navbar-menu" class="flex flex-row align-center gap-cs-4">
-            <Socials />
             <span class="share-blog-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20.315" height="24" viewBox="0 0 20.315 26">
                     <g id="Sharing_Button" data-name="Sharing Button" transform="translate(1 1)">
