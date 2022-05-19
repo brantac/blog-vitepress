@@ -5,10 +5,15 @@ import Socials from "./Socials.vue";
 <template>
     <div class="author flex flex-row gap-x-4">
         <div class="name ">Arthur Brant</div>
-        <Socials class="flex flex-row gap-x-4" />
+        <Socials class="socials flex flex-row gap-x-4 items-center" />
     </div>
 </template>
 
 <style scoped>
-
+.author {
+    font-size: 1rem;
+}
+.socials :deep(svg) {
+    height: 1rem;
+}
 </style>
