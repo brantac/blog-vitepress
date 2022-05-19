@@ -18,16 +18,7 @@
 </script>
 
 <style scoped>
-/* Icons */
 .social-icon path {
     fill: var(--icon-color);
 }
-/* .social-icon {
-    display: none;
-}
-@media (min-width: 768px) {
-    .social-icon {
-        display: unset;
-    }
-} */
 </style>
