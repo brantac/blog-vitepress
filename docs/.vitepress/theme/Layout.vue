@@ -20,7 +20,7 @@
             </a>
         </div>
         <div id="navbar-menu" class="flex flex-row align-center gap-cs-4">
-            <Share />
+            <Share :path="route.path" />
             <span class="menu-toggler">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
                     <g id="Hamburger_Menu_Open" data-name="Hamburger Menu Open" transform="translate(1 1)">
